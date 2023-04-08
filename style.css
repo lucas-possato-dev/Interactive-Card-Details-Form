@@ -292,8 +292,8 @@ input[type=number]::-webkit-outer-spin-button {
   .completed-container {
     grid-column: 2;
     grid-row: 1;
+    width: 30%;
     margin-left: 250px;
-
   }
   .card-form {
     margin-top: 0px;
