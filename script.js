@@ -82,6 +82,12 @@ cardNumberInput.addEventListener('keydown', (event) => {
   }
 });
 
+cardNumberInput.addEventListener('touchstart', (event) => {
+  if (!/[0-9]/.test(event.key)) {
+    event.preventDefault();
+  }
+});
+
 cardNumberInput.addEventListener('input', (event) => {
   const cardNumber = event.target.value.replaceAll(' ', '');
   const formattedCardNumber = (cardNumber.match(/.{1,4}/g) || []).join(' ');
