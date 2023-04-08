@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+
+  <main>
+    <section class="cards">
+      <section class="card-container">
+        <div class="card-back">
+          <img class="back-img" src="/images/bg-card-back.png" alt="">
+          <span class="cvc">000</span>
+        </div>
+        <div class="card-front">
+          <img class="front-img" src="/images/bg-card-front.png" alt="">
+          <div class="card-details">
+            <img class="logo" src="/images/card-logo.svg" alt="">
+            <span class="number" data-target="front" data-index="0">0000 0000 0000 0000</span>
+            <div class="info">
+              <span class="name" data-target="front" data-index="1">Jane Appleseed</span>
+              <span class="date">00/00</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="form-container">
+      <form class="card-form">
+        <label for="name">Cardholder Name</label>
+        <input type="text" placeholder="e.g. Jane Appleseed" data-target="front" data-index="1">
+        <span class="error">Can't be blank</span>
+        <span class="errorLetters">Wrong format, letters only</span>
+
+        <label for="number">Card Number</label>
+        <input type="text" id="cardNumber" data-target="front" data-index="0" placeholder="e.g. 1234 5678 9123 0000">
+        <span class="error">Can't be blank</span>
+        <div class="grid-form">
+          <label for="date">Exp. Date (MM/YY)</label>
+          <input type="number" id="MM" data-target="front" data-index="2" placeholder="MM">
+          <input type="number" id="YY" data-target="front" data-index="3" placeholder="YY">
+          <span class="error">Can't be blank</span>
+          <label id="label-cvc" for="CVC">CVC</label>
+          <input type="number" id="cvc" placeholder="e.g. 123">
+          <span class="error">Can't be blank</span>
+        </div>
+        <input type="submit" id="confirm" value="Confirm">
+
+      </form>
+    </section>
+
+    <section class="completed-container">
+      <section class="completed">
+        <div>
+          <img src="/images/icon-complete.svg" alt="">
+        </div>
+
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <a class="button" href="">Continue</a>
+      </section>
+    </section>
+
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
