@@ -76,17 +76,12 @@ function handleInput() {
   });
 }
 
-cardNumberInput.addEventListener('keydown', (event) => {
-  if (!/[0-9]/.test(event.key)) {
-    event.preventDefault();
-  }
+cardNumberInput.addEventListener('input', (event) => {
+  const input = event.target;
+  const regex = /[^0-9]/g;
+  input.value = input.value.replace(regex, "");
 });
 
-cardNumberInput.addEventListener('touchstart', (event) => {
-  if (!/[0-9]/.test(event.key)) {
-    event.preventDefault();
-  }
-});
 
 cardNumberInput.addEventListener('input', (event) => {
   const cardNumber = event.target.value.replaceAll(' ', '');
